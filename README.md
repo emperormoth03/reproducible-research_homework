@@ -3,11 +3,12 @@
 \# INSERT ANSWERS HERE #
 
 Question 4.
+
 a. 
 
-![image](https://github.com/user-attachments/assets/125ab123-d847-4964-8242-4b07018fd2dd)
-
 Running the provided code simulates two random walks each comprising 500 steps. The left and right plots have very different paths, highlightting the variability when random variables are involved. The colour of the lines represent the progression of time as the walks proceed, with the lines becoming lighter as steps increase, allowing us to see the progression of the paths.
+
+![image](https://github.com/user-attachments/assets/125ab123-d847-4964-8242-4b07018fd2dd)
 
 b. 
 
@@ -30,6 +31,12 @@ ggsave("reproducible_random_walk.png", plot = overall_plot, width = 10, height =
 ![reproducible_random_walk](https://github.com/user-attachments/assets/d4d08c01-f917-4ff5-931b-ac144a27a4bf)
 
 #THE FULL CODE CAN BE FOUND IN THE 'question-4-code' FILE IN THE 'reproducible-research-homework' repo
+
+d. 
+
+Here we can see the addition of the seed as well as the ggsave function. The grid to arrange plot1 and plot2 together has been named 'overall_plot' so that it can be saved as an image. 
+
+![image](https://github.com/user-attachments/assets/c6368592-9246-46a8-a69c-47a4d16d7496)
 
 
 ## Instructions
