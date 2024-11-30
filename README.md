@@ -2,6 +2,12 @@
 
 \# INSERT ANSWERS HERE #
 
+Questions 1, 2, and 3:
+
+Use the following URL to access the logistic_growth repo. 
+
+https://github.com/emperormoth03/logistic_growth.git
+
 Question 4.
 
 a. 
