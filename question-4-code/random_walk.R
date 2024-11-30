@@ -4,6 +4,8 @@
 library(ggplot2)
 library(gridExtra)
 
+set.seed(1)
+
 random_walk  <- function (n_steps) {
   
   df <- data.frame(x = rep(NA, n_steps), y = rep(NA, n_steps), time = 1:n_steps)
@@ -52,4 +54,7 @@ plot2 <- ggplot(aes(x = x, y = y), data = data2) +
   
   ylab("y-coordinate")
 
-grid.arrange(plot1, plot2, ncol=2)
+overall_plot <- grid.arrange(plot1, plot2, ncol=2)
+
+#Save the plot with a fixed size to ensure reproducibility 
+ggsave("reproducible_random_walk.png", plot = overall_plot, width = 10, height = 6, dpi = 600)
