@@ -80,7 +80,7 @@ The following code is to produce a recreation of the plot log(Virion volume) aga
 
 #Create the plot
 
-'''r
+```r
 virus_plot <- ggplot(virus_data, aes(x = log.Genome.length, y = log.Virion.volume)) +
   geom_point(size = 2.5) +    #Plot individual data points, set size 
   geom_smooth(method = "lm", se = TRUE, color = "blue") +   #Plot linear function
@@ -94,7 +94,7 @@ virus_plot <- ggplot(virus_data, aes(x = log.Genome.length, y = log.Virion.volum
     axis.title.y = element_text(face = "bold", size = 14),                   
     axis.text.x = element_text(size = 12),                   #Increase size of axis tick labels
     axis.text.y = element_text(size = 12))
-
+```
 <img width="559" alt="plot_zoom_png" src="https://github.com/user-attachments/assets/7e3e8c4c-c2ad-4b21-8a94-23835a898a60">
 
 
