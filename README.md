@@ -41,7 +41,7 @@ Here we can see the addition of the seed as well as the ggsave function. The gri
 ####################################################################################################
 
 Question 5. 
-
+#THE FULL CODE FOR QUESTION 5 CAN BE FOUND IN 'dsDNA_virus_analysis.R' IN THE 'question-5-data' FILE 
 a. 
 
 The data table has 13 columns and 33 rows. 
@@ -74,6 +74,26 @@ The calculated values match the values presented in the paper for dsDNA viruses
 
 d. 
 
+The following code is to produce a recreation of the plot log(Virion volume) against log(Genome length) for question d. 
+
+#library(ggplot2)
+
+#Create the plot
+virus_plot <- ggplot(virus_data, aes(x = log.Genome.length, y = log.Virion.volume)) +
+  geom_point(size = 2.5) +    #Plot individual data points, set size 
+  geom_smooth(method = "lm", se = TRUE, color = "blue") +   #Plot linear function
+  labs(
+    x = "log [Genome length (kb)]",   #Name axes to match plot in repo
+    y = "log [Virion volume (nm3)]") +
+  theme_minimal() +
+  theme(
+    panel.border = element_rect(fill = NA, linewidth = 1),   #Faint border around plot
+    axis.title.x = element_text(face = "bold", size = 14),   #Make axis titles bold and larger
+    axis.title.y = element_text(face = "bold", size = 14),                   
+    axis.text.x = element_text(size = 12),                   #Increase size of axis tick labels
+    axis.text.y = element_text(size = 12))
+
+<img width="559" alt="plot_zoom_png" src="https://github.com/user-attachments/assets/7e3e8c4c-c2ad-4b21-8a94-23835a898a60">
 
 
 e. 
