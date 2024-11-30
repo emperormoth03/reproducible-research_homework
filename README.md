@@ -38,6 +38,51 @@ Here we can see the addition of the seed as well as the ggsave function. The gri
 
 ![image](https://github.com/user-attachments/assets/c6368592-9246-46a8-a69c-47a4d16d7496)
 
+####################################################################################################
+
+Question 5. 
+
+a. 
+
+The data table has 13 columns and 33 rows. 
+
+![image](https://github.com/user-attachments/assets/d16c8f04-bc5a-4682-b7d6-e96878d96c30)
+
+b. 
+
+The relationship between virion volume and genome size is an allometric equation, so we can use a natural log transformation to make it a linear relationship.
+
+V = αL^β
+
+ln(V) = ln(α) + βln(L)
+
+c. 
+
+Now that the data has been ln transformed, we can fit a linear model. 
+
+![image](https://github.com/user-attachments/assets/161b09a7-53bc-44ee-9ad3-8f72f905b41f)
+
+The estimate for log.Genome.length (1.515) is the exponent, describing the slope of the line.
+
+We can calculate alpha by taking the exponential of the estimate for the intercept: e^7.0748 = 1181.8
+
+So our estimated values for beta (exponent) is 1.515, and our estimated value for alpha (scaling factor) is 1182
+
+The calculated values match the values presented in the paper for dsDNA viruses
+
+![image](https://github.com/user-attachments/assets/de47b524-df91-4c53-8b53-2cd75d8f4d01)
+
+d. 
+
+
+
+e. 
+
+We can use these values to make estimates for virion volume (V) for different virus genome lengths (L). We can simply put our values into the equation V = αL^β
+
+When genome length = 300kb
+
+V = 1182*300^1.515 = 6690463nm^3
 
 ## Instructions
 
