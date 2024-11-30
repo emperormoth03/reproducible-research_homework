@@ -2,6 +2,36 @@
 
 \# INSERT ANSWERS HERE #
 
+Question 4.
+a. 
+
+![image](https://github.com/user-attachments/assets/125ab123-d847-4964-8242-4b07018fd2dd)
+
+Running the provided code simulates two random walks each comprising 500 steps. The left and right plots have very different paths, highlightting the variability when random variables are involved. The colour of the lines represent the progression of time as the walks proceed, with the lines becoming lighter as steps increase, allowing us to see the progression of the paths.
+
+b. 
+
+A random seed is a set value used to start off a pseudo random number generator (PRNG), computers cannot truly generate random numbers, but they can use algorithms to mimic randomness, hence the term 'pseudo random'. If you don't set a seed value, the PRNG will start from an unpredictable state, leading to different pseudo random numbers being generated that result in different plots being produced. Hence why the random walk plots are different each time the code is run. One can fix the starting point of a PRNG by setting a seed to ensure that the same sequence of pseudo random numbers are generated each time the code is run, therefore allowing reproducibility as the output should always be the same. 
+
+We can set a seed in R with the code: set.seed(x), with x representing the seed value. The PRNG will initialise at a specific state, producing the same pseudo random output each time. 
+
+c.
+
+In order to make the simulation reproducible, we can simply set a seed value at the start of the code to ensure that the PRNG is initialised in the same way each time the code is run, so that the same pseudo random values are produced.
+
+set.seed(1) is established before the rest of the code. The set value itself is arbitrary, but must be kept the same so that the same pseudo random values are produced. 
+
+Now each time the code is run, the same output is produced. But to ensure extra reproducibility, we can fix the size of the plot so that the ouput will truly be the same. We can do this with the ggsave function:
+
+overall_plot <- grid.arrange(plot1, plot2, ncol = 2)
+
+ggsave("reproducible_random_walk.png", plot = overall_plot, width = 10, height = 6, dpi = 600)
+
+![reproducible_random_walk](https://github.com/user-attachments/assets/d4d08c01-f917-4ff5-931b-ac144a27a4bf)
+
+#THE FULL CODE CAN BE FOUND IN THE 'question-4-code' FILE IN THE 'reproducible-research-homework' repo
+
+
 ## Instructions
 
 The homework for this Computer skills practical is divided into 5 questions for a total of 100 points. First, fork this repo and make sure your fork is made **Public** for marking. Answers should be added to the # INSERT ANSWERS HERE # section above in the **README.md** file of your forked repository.
