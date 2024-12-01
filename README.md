@@ -75,9 +75,11 @@ We can calculate alpha by taking the exponential of the estimate for the interce
 
 So our estimated values for beta (exponent) is 1.515, and our estimated value for alpha (scaling factor) is 1182
 
-The calculated values match the values presented in the paper for dsDNA viruses
+The calculated values match the values presented in the paper by (Cui et al. 2014) for dsDNA viruses
 
 ![image](https://github.com/user-attachments/assets/de47b524-df91-4c53-8b53-2cd75d8f4d01)
+
+> **From Cui, Jie, Timothy E. Schlub, and Edward C. Holmes. "An allometric relationship between the genome length and virion volume of viruses." Journal of virology 88.11 (2014): 6403-6410.**
 
 d. 
 The following code is to produce a recreation of the plot log(Virion volume) against log(Genome length) for question d. 
