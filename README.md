@@ -1,14 +1,12 @@
 # Reproducible research: version control and R
 
-\# INSERT ANSWERS HERE #
-
-Questions 1, 2, and 3:
+## Questions 1, 2, and 3:
 
 Use the following URL to access the logistic_growth repo. 
 
 https://github.com/emperormoth03/logistic_growth.git
 
-Question 4.
+## Question 4.
 
 a. 
 Running the provided code simulates two random walks each comprising 500 steps. The left and right plots have very different paths, highlightting the variability when random variables are involved. The colour of the lines represent the progression of time as the walks proceed, with the lines becoming lighter as steps increase, allowing us to see the progression of the paths.
@@ -34,17 +32,17 @@ ggsave("reproducible_random_walk.png", plot = overall_plot, width = 10, height =
 
 ![reproducible_random_walk](https://github.com/user-attachments/assets/d4d08c01-f917-4ff5-931b-ac144a27a4bf)
 
-#THE FULL CODE CAN BE FOUND IN THE 'question-4-code' FILE IN THE 'reproducible-research-homework' repo
+#The full code can be found in the 'question-4-code' file in 'reproducible-research-homework' repo, click [HERE](https://github.com/emperormoth03/reproducible-research_homework/blob/d618a62e0ae2737f8fffc1d986ecc583d85c690d/question-4-code/random_walk.R)
 
 d. 
 Here we can see the addition of the seed as well as the ggsave function. The grid to arrange plot1 and plot2 together has been named 'overall_plot' so that it can be saved as an image. 
 
 ![image](https://github.com/user-attachments/assets/c6368592-9246-46a8-a69c-47a4d16d7496)
 
-####################################################################################################
+## Question 5. 
 
-Question 5. 
-#THE FULL CODE FOR QUESTION 5 CAN BE FOUND IN 'dsDNA_virus_analysis.R' IN THE 'question-5-data' FILE 
+#The full code for question 5 can be found in 'dsDNA_virus_analysis.R' in the 'question-5-data' file, click [HERE](https://github.com/emperormoth03/reproducible-research_homework/blob/d618a62e0ae2737f8fffc1d986ecc583d85c690d/question-5-data/dsDNA_virus_analysis.R)
+
 a. 
 The data table has 13 columns and 33 rows. 
 
