@@ -51,10 +51,12 @@ The data table has 13 columns and 33 rows.
 b. 
 The relationship between virion volume and genome size is an allometric equation, so we can use a natural log transformation to make it a linear relationship.
 
+```math
 V = αL^β
-
+```
+```math
 ln(V) = ln(α) + βln(L)
-
+```
 ```r
 #Add natural log-transformed columns
 virus_data$log.Genome.length <- log(virus_data$Genome.length..kb.)
@@ -107,11 +109,20 @@ virus_plot <- ggplot(virus_data, aes(x = log.Genome.length, y = log.Virion.volum
 
 
 e. 
-We can use these values to make estimates for virion volume (V) for different virus genome lengths (L). We can simply put our values into the equation V = αL^β
+We can use these values we obtained for the exponent and scaling factor to make estimates for virion volume (V) for different virus genome lengths (L). We can simply put our values into the allometric equation.
 
-When genome length = 300kb
+```math
+V = αL^β
+```
+β = 1.52
+
+α = 1182
+
+When genome length (L) = 300kb
 
 V = 1182*300^1.515 = 6690463nm^3
+
+In the data set, there is a virus with a similar genome length of 288.54kb but with a virion volume of 18480000nm^3. This is 2.76x larger than the estimate we obtained for V at 300kb according to the equation. This demonstrates that while there is a general trend of virion volume increasing with genome length, there is still a high degree of varability, so caution must be taken and specific measurements per virion recorded to ensure accuracy. 
 
 ## Instructions
 
