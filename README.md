@@ -69,19 +69,27 @@ head(virus_data)
 c. 
 Now that the data has been ln transformed, we can fit a linear model. 
 
+```r
+#Fit the linear model
+model <- lm(log.Virion.volume ~ log.Genome.length, data = virus_data)
+
+#Get p-values and coefficients
+summary(model)$coefficients
+```
+
 ![image](https://github.com/user-attachments/assets/161b09a7-53bc-44ee-9ad3-8f72f905b41f)
 
-The estimate for log.Genome.length (1.515) is the exponent, describing the slope of the line.
+The estimate for log.Genome.length (1.515) is the exponent, describing the slope of the line. We can calculate alpha by taking the exponential of the estimate for the intercept: e^(7.0748) = 1181.8
 
-We can calculate alpha by taking the exponential of the estimate for the intercept: e^7.0748 = 1181.8
-
-So our estimated values for beta (exponent) is 1.515, and our estimated value for alpha (scaling factor) is 1182
+So our estimated value for β (exponent) is 1.515, and our estimated value for α (scaling factor) is 1182
 
 The calculated values match the values presented in the paper by (Cui et al. 2014) for dsDNA viruses
 
 ![image](https://github.com/user-attachments/assets/de47b524-df91-4c53-8b53-2cd75d8f4d01)
 
 > **From Cui, Jie, Timothy E. Schlub, and Edward C. Holmes. "An allometric relationship between the genome length and virion volume of viruses." Journal of virology 88.11 (2014): 6403-6410.**
+
+The p-values generated from the linear model analysis are highly significant for both terms (p<0.0001), indicating that there is strong evidence to suggest that genome length is a strong predictor or virion volume. This makes biological sense, as we may expect viruses with larger genome sizes to require a larger capsule to contain their genetic information. This also indicates that our fitted linear model, the ln tranformed allometric equation (ln(V) = ln(α) + βln(L)), is an effective representation of the data. 
 
 d. 
 The following code is to produce a recreation of the plot log(Virion volume) against log(Genome length) for question d. 
@@ -122,7 +130,7 @@ When genome length (L) = 300kb
 
 V = 1182*300^1.515 = 6690463nm^3
 
-In the data set, there is a virus with a similar genome length of 288.54kb but with a virion volume of 18480000nm^3. This is 2.76x larger than the estimate we obtained for V at 300kb according to the equation. This demonstrates that while there is a general trend of virion volume increasing with genome length, there is still a high degree of varability, so caution must be taken and specific measurements per virion recorded to ensure accuracy. 
+In the data set, there is a virus with a similar genome length of 288.54kb but with a virion volume of 18480000nm^3. This is 2.76x larger than the estimate we obtained for V at 300kb according to the equation. This demonstrates that while there is a significant trend of virion volume increasing with genome length, there is still a high degree of varability, so caution must be taken and specific measurements per virion recorded to ensure accuracy. 
 
 ## Instructions
 
