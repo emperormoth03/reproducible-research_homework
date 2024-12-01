@@ -55,6 +55,15 @@ V = αL^β
 
 ln(V) = ln(α) + βln(L)
 
+```r
+#Add natural log-transformed columns
+virus_data$log.Genome.length <- log(virus_data$Genome.length..kb.)
+virus_data$log.Virion.volume <- log(virus_data$Virion.volume..nm.nm.nm.)
+
+#Inspect the transformed data
+head(virus_data)
+```
+
 c. 
 Now that the data has been ln transformed, we can fit a linear model. 
 
