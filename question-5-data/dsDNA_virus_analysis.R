@@ -4,6 +4,12 @@
 #Load data, don't override original data frame 
 virus_data <- read.csv("question-5-data/Cui_etal2014.csv")
 
+#Inspect the data to evulate rows and columns
+head(virus_data)
+
+
+#Question b
+
 #Add natural log-transformed columns
 virus_data$log.Genome.length <- log(virus_data$Genome.length..kb.)
 virus_data$log.Virion.volume <- log(virus_data$Virion.volume..nm.nm.nm.)
