@@ -91,6 +91,29 @@ The calculated values match the values presented in the paper by (Cui et al. 201
 
 The p-values generated from the linear model analysis are highly significant for both terms (p<0.0001), indicating that there is strong evidence to suggest that genome length is a strong predictor or virion volume. This makes biological sense, as we may expect viruses with larger genome sizes to require a larger capsule to contain their genetic information. This also indicates that our fitted linear model, the ln tranformed allometric equation (ln(V) = ln(α) + βln(L)), is an effective representation of the data. 
 
+Diagnostic Plots:
+
+However, while the estimated values for the parameters match those from the paper, diagnostic plots reveal that some assumptions of the linear model aren't fully met. 
+```r
+#Diagnostic plots to assess normality and homoscedasticity assumptions
+par(mfrow = c(2, 2),     #Set spacing for plots as 2x2
+    cex.axis = 1.2,        #Increase size of axis labels
+    cex.lab = 1.2)         #Increase size of axis titles
+plot(model)
+```
+
+![image](https://github.com/user-attachments/assets/a09793d7-fe1b-4b79-a42e-284dc0780119)
+
+**Residuals vs Fitted** - curved pattern could suggest that there isn't a linear relationship between transformed variables
+
+**Q-Q Residuals Plot** - deviations from straight diagonal line, indicating that assumption of normality isn't closely met
+
+**Scale-Location Plot** - curve has a hump shape in the middle, indicating non-constant variance of residuals
+
+**Residuals vs Leverage** - several points with relatively high leverage identified, which may disproportionally affect the model 
+
+Diagnostics show that the model assumptions aren't closely met for this dataset. This indicates that there may be underlying trends in the data that warrant more attention. But perhaps for the sake of this investigation, we can assume that the linear model is robust enough to violate these assumptions. These violations may not be enough to invalidate the p-values for the model, but they do suggest that further refinement of the model may be necessary. A larger data set may reveal a more linear relationship between log transformed variables, but we can't fully assume that this will be the case.
+
 d. 
 The following code is to produce a recreation of the plot log(Virion volume) against log(Genome length) for question d. 
 
