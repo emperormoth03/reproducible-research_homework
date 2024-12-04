@@ -9,7 +9,7 @@ https://github.com/emperormoth03/logistic_growth.git
 ## Question 4.
 
 a. 
-Running the provided code simulates two random walks each comprising 500 steps. The left and right plots have very different paths, highlightting the variability when random variables are involved. The colour of the lines represents the progression of time as the walks proceed, with the lines becoming lighter as steps increase, allowing us to see the path of the walks over the sequence of 500 steps.
+Running the provided code simulates two random 2D walks each comprising 500 steps of a fixed length (around a quarter the length of the distance between two consecutive coordinates). The left and right plots have very different paths, highlighting the variability when random variables are involved. The steps appear to have the potential to go in any direction, since the path often loops back on itself. The colour of the lines represents the progression of time as the walks proceed, with the lines becoming an increasingly lighter shade of blue as steps increase, allowing us to see the path of the walks over the sequence of their 500 steps. For example, we can see the end point of the walk in the plot on the right, at coordinate (-7.1, 1.25), but the end point of the path on the left is harder to identify as the path loops back on itself. 
 
 ![image](https://github.com/user-attachments/assets/125ab123-d847-4964-8242-4b07018fd2dd)
 >**Fig. 1** Two distinct random walk simulations over 500 steps
