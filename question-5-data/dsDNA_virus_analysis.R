@@ -19,7 +19,6 @@ head(virus_data)
 
 
 
-
 #Question c 
 
 #Fit the linear model
@@ -32,6 +31,11 @@ summary(model)$coefficients
 beta <- coef(model)["log.Genome.length"]
 alpha <- exp(coef(model)["(Intercept)"])
 
+#Diagnostic plots to assess normality and homoscedasticity assumptions
+par(mfrow = c(2, 2),     #Set spacing for plots as 2x2
+    cex.axis = 1.2,        #Increase size of axis labels
+    cex.lab = 1.2)         #Increase size of axis titles
+plot(model)
 
 
 #Question d
