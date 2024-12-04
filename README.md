@@ -32,7 +32,7 @@ ggsave("reproducible_random_walk.png", plot = overall_plot, width = 10, height =
 ```
 
 ![reproducible_random_walk](https://github.com/user-attachments/assets/d4d08c01-f917-4ff5-931b-ac144a27a4bf)
->**Fig. 2** Reproducible two distinct random walk simulations over 500 steps - setting seed and dimensions of plot ensure identical output
+>**Fig. 2** Reproducible plot of two distinct random walk simulations over 500 steps - setting seed and dimensions of plot ensures identical output
 
 #The full code can be found in the 'question-4-code' file in 'reproducible-research-homework' repo, click [HERE](https://github.com/emperormoth03/reproducible-research_homework/blob/d618a62e0ae2737f8fffc1d986ecc583d85c690d/question-4-code/random_walk.R)
 
@@ -144,7 +144,7 @@ virus_plot <- ggplot(virus_data, aes(x = log.Genome.length, y = log.Virion.volum
 >**Fig. 4** Plot of log(Virion volume) against log(Genome length) for the dsDNA virus data set
 
 e. 
-We can use these values we obtained for the exponent and scaling factor to make estimates for virion volume (V) for different virus genome lengths (L). We can simply put our values into the allometric equation.
+We can use the values we obtained for the exponent and scaling factor to calculate estimates for virion volume (V) for different virus genome lengths (L). We can simply put our values into the allometric equation.
 
 ```math
 V = αL^β
