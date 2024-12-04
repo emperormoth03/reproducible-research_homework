@@ -12,6 +12,7 @@ a.
 Running the provided code simulates two random walks each comprising 500 steps. The left and right plots have very different paths, highlightting the variability when random variables are involved. The colour of the lines represents the progression of time as the walks proceed, with the lines becoming lighter as steps increase, allowing us to see the path of the walks over the sequence of 500 steps.
 
 ![image](https://github.com/user-attachments/assets/125ab123-d847-4964-8242-4b07018fd2dd)
+>**Fig. 1** Two distinct random walk simulations over 500 steps
 
 b. 
 A random seed is a set value used to start off a pseudo random number generator (PRNG), computers cannot truly generate random numbers, but they can use algorithms to mimic randomness, hence the term 'pseudo random'. If you don't set a seed value, the PRNG will start from an unpredictable state, leading to different pseudo random numbers being generated that result in different plots being produced. Hence why the random walk plots are different each time the code is run. One can fix the starting point of a PRNG by setting a seed to ensure that the same sequence of pseudo random numbers are generated each time the code is run, therefore allowing reproducibility as the output should always be the same. 
@@ -31,6 +32,7 @@ ggsave("reproducible_random_walk.png", plot = overall_plot, width = 10, height =
 ```
 
 ![reproducible_random_walk](https://github.com/user-attachments/assets/d4d08c01-f917-4ff5-931b-ac144a27a4bf)
+>**Fig. 2** Reproducible two distinct random walk simulations over 500 steps - setting seed and dimensions of plot ensure identical output
 
 #The full code can be found in the 'question-4-code' file in 'reproducible-research-homework' repo, click [HERE](https://github.com/emperormoth03/reproducible-research_homework/blob/d618a62e0ae2737f8fffc1d986ecc583d85c690d/question-4-code/random_walk.R)
 
@@ -103,6 +105,7 @@ plot(model)
 ```
 
 ![image](https://github.com/user-attachments/assets/a09793d7-fe1b-4b79-a42e-284dc0780119)
+>**Fig. 3** Diagnostic plots for virus data linear model 
 
 **Residuals vs Fitted** - curved pattern could suggest that there isn't a linear relationship between transformed variables
 
@@ -138,6 +141,7 @@ virus_plot <- ggplot(virus_data, aes(x = log.Genome.length, y = log.Virion.volum
 
 <img width="559" alt="plot_zoom_png" src="https://github.com/user-attachments/assets/7e3e8c4c-c2ad-4b21-8a94-23835a898a60">
 
+>**Fig. 4** Plot of log(Virion volume) against log(Genome length) for the dsDNA virus data set
 
 e. 
 We can use these values we obtained for the exponent and scaling factor to make estimates for virion volume (V) for different virus genome lengths (L). We can simply put our values into the allometric equation.
